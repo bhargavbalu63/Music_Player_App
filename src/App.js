@@ -16,7 +16,7 @@ function App() {
 },
 {
   id:1,
-  name:"Almost Padipoyane (Dass Ki Damki)",
+  name:"Almost Padipoyinde (Dass Ki Damki)",
   track:song2,
   img:"https://c.saavncdn.com/332/Almost-Padipoyindhe-Pilla-From-Das-Ka-Dhamki-Telugu-2022-20221205084208-500x500.jpg"
 },
@@ -83,7 +83,15 @@ setSelect(i)
     <div className="App">
 
 
-     {data.map((each,i)=>
+  
+
+
+
+      <h1 style={{textDecoration:"underline"}}>Songs Player</h1>
+      
+      <div className='songlist'>
+     
+   {data.map((each,i)=>
      {
        return(
       
@@ -106,11 +114,12 @@ setSelect(i)
      })}
 
 
-
-      <h1 style={{textDecoration:"underline"}}>Songs Player</h1>
-      <h2>{song.name}</h2>
+    
+   </div>
+   <h2>{song.name}</h2>
       <img alt='' src={song.img} />
-      <audio   id='audios' autoPlay controls  src={song.track}  />     
+
+   <audio   id='audios' autoPlay controls  src={song.track}  />  
       {/* <label  onClick={()=>handlePlayClick()}>play</label>                            ref={audioRef}  ==> use this in audio tag
       <label onClick={()=>handlePauseClick()}>pause</label>
       <input type="range" min="0" max="1" step="0.01" value={volume} onChange={handleVolumeChange} /> */}
